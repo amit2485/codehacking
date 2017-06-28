@@ -1,6 +1,22 @@
 @extends('layouts.admin')
 
 @section('content')
+
+    @if(Session::has('created_user'))
+
+        <p class="bg-danger">{{session('created_user')}}</p>
+
+
+    @endif
+
+    @if(Session::has('deleted_user'))
+
+        <p class="bg-danger">{{session('deleted_user')}}</p>
+
+
+    @endif
+
+    <p></p>
     <h1>Users</h1>
 
     <table class="table">

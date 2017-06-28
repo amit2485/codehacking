@@ -13,8 +13,7 @@
 
         <div class="col-sm-9">
 
-            {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUsersController@update',$user->id],'files' => true]) !!}
-
+            {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUsersController@update',$user->id],'fies' => true]) !!}
 
 
             {{csrf_field()}}
@@ -60,6 +59,18 @@
                 {!! Form::submit('Edit User',['class'=>'btn btn-info']) !!}
 
             </div>
+
+
+            {!! Form::close() !!}
+
+
+           {!! Form::open(['method'=>'DELETE','action'=>['AdminUsersController@destroy',$user->id]]) !!}
+
+
+               <div class="form-group">
+                   {!! Form::submit('Delete User',['class'=>'btn btn-danger']) !!}
+
+               </div>
 
 
             {!! Form::close() !!}
