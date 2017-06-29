@@ -123,7 +123,9 @@ class AdminUsersController extends Controller
 
         $user = User::findOrFail($id);
 
-        if($file = $request->file('photo_id')){
+        if($request->photo_id){
+
+            $file = $request->file('photo_id');
 
             $name = time().$file->getClientOriginalName();
 

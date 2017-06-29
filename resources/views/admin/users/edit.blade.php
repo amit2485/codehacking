@@ -13,7 +13,7 @@
 
         <div class="col-sm-9">
 
-            {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUsersController@update',$user->id],'fies' => true]) !!}
+            {!! Form::model($user,['method'=>'PATCH','action'=>['AdminUsersController@update',$user->id],'files' => true]) !!}
 
 
             {{csrf_field()}}
